@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kanikicharla Vishnu Vardhan | Portfolio</title>
+  <meta name="description" content="Portfolio of Kanikicharla Vishnu Vardhan - ECE undergraduate focusing on VLSI, embedded systems, and digital design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #0b0f14;
+  --panel: #0f1620;
+  --elev: #121a26;
+  --text: #e6edf3;
+  --muted: #9fb1c3;
+  --brand: #4cc2ff;
+  --brand-2: #7cf4c1;
+  --accent: #ffd166;
+  --border: #1e2a3a;
+  --shadow: 0 1px 2px rgba(0,0,0,.2), 0 8px 24px rgba(0,0,0,.25);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(76,194,255,0.08), transparent),
+              radial-gradient(1000px 500px at 100% 0%, rgba(124,244,193,0.08), transparent),
+              var(--bg);
+}
+img { max-width: 100%; display: block; }
+.container { width: min(1100px, 92%); margin: 0 auto; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(11,15,20,.8); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: .5px; border: 2px solid var(--border); padding: 6px 10px; border-radius: 8px; background: linear-gradient(180deg, var(--panel), var(--elev)); box-shadow: var(--shadow); }
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; }
+.site-nav a { color: var(--muted); text-decoration: none; padding: 8px 12px; border-radius: 8px; display: block; }
+.site-nav a:hover, .site-nav a.active { color: var(--text); background: var(--elev); }
+.nav-toggle { display: none; background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+
+/* Hero */
+.hero { padding: 72px 0 24px; border-bottom: 1px solid var(--border); }
+.hero-inner { display: grid; grid-template-columns: 1fr; gap: 16px; align-items: center; }
+.hero h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 40px); letter-spacing: .3px; }
+.subtitle { color: var(--muted); margin: 0 0 12px; }
+.contact { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: var(--muted); }
+.contact a { color: var(--brand); text-decoration: none; }
+.links { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.btn { background: linear-gradient(180deg, #1a2534, #0e1622); color: var(--text); border: 1px solid var(--border); padding: 10px 14px; border-radius: 10px; text-decoration: none; box-shadow: var(--shadow); }
+.btn.secondary { background: linear-gradient(180deg, #163022, #0f2219); }
+.btn.ghost { background: transparent; border: 1px solid var(--border); }
+
+/* Sections */
+.section { padding: 40px 0; }
+.section h2 { margin: 0 0 16px; font-size: 22px; }
+.grid.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card { background: linear-gradient(180deg, var(--panel), var(--elev)); border: 1px solid var(--border); border-radius: 14px; padding: 14px; box-shadow: var(--shadow); }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; padding: 0; margin: 8px 0 0; list-style: none; }
+.tags li { background: #0e1520; border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; color: var(--muted); }
+.bullets { margin: 0; padding-left: 18px; color: var(--muted); }
+.projects { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.project .project-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.project .stack { margin: 0; }
+.link { color: var(--brand-2); text-decoration: none; }
+.link-card { display: block; text-decoration: none; color: var(--text); }
+.link-card:hover { outline: 2px solid var(--border); }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); padding: 20px 0; color: var(--muted); text-align: center; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects, .grid.two { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .site-nav { display: none; position: absolute; top: 56px; right: 4%; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow); }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; }
+  .nav-toggle { display: inline-block; }
+}
+  </style>
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">KVV</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Kanikicharla Vishnu Vardhan</h1>
+        <p class="subtitle">B.Tech. in Electronics and Communication Engineering, IIITDM Kancheepuram (2027)</p>
+        <div class="contact">
+          <a href="tel:+919493942287">+91 9493942287</a>
+          <span>•</span>
+          <a href="mailto:ec23b1123@iiitdm.ac.in">ec23b1123@iiitdm.ac.in</a>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://linkedin.com/in/vishnu-vardhan-kanikicharla-1bb017283" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/VishnuVardhan12345" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="#projects">View Projects</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p>
+        ECE undergraduate with a strong foundation in VLSI, digital design, and embedded systems. Passionate about building reliable, real-time systems and exploring semiconductor design.
+      </p>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container grid two">
+      <div>
+        <h2>Education</h2>
+        <div class="card">
+          <h3>IIITDM Kancheepuram</h3>
+          <p>B.Tech. in Electronics and Communication Engineering</p>
+          <p><strong>CGPA:</strong> 8.69 • <em>Expected: 2027</em></p>
+        </div>
+        <div class="card">
+          <h3>Sri Srinivasa Gravity Junior College</h3>
+          <p><strong>Percentage:</strong> 95.7%</p>
+        </div>
+        <div class="card">
+          <h3>Sri Chaitanya School</h3>
+          <p><strong>Percentage:</strong> 100%</p>
+        </div>
+      </div>
+      <div>
+        <h2 id="courses">Courses</h2>
+        <div class="card">
+          <h3>Core Subjects</h3>
+          <p>Analog and Digital Circuits, Network Theory, MOS Modeling for VLSI Circuits, VLSI System Design, Digital Signal Processing, Embedded Systems, Sensing and Instrumentation, Electromagnetic Waves, Data Structures and Algorithms, Microprocessors and Microcontrollers, Solid-State Electronic Devices, Control Systems, Communication Systems.</p>
+        </div>
+        <div class="card">
+          <h3>Design Courses</h3>
+          <p>System Thinking for Design, Sociology of Design, Smart Product Design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="card">
+          <h3>Programming</h3>
+          <ul class="tags">
+            <li>C</li>
+            <li>Data Structures and Algorithms</li>
+            <li>Verilog</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <ul class="tags">
+            <li>Xilinx Vivado</li>
+            <li>TCAD</li>
+            <li>LTSpice</li>
+            <li>Multisim</li>
+            <li>Arduino IDE</li>
+            <li>LabVIEW</li>
+            <li>AutoCAD</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Soft Skills</h3>
+          <ul class="tags">
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Public Speaking</li>
+            <li>Systems Thinking</li>
+            <li>Active Listening</li>
+            <li>Presentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="card project">
+          <div class="project-head">
+            <h3>Digital Design using Verilog HDL</h3>
+            <ul class="stack tags">
+              <li>Verilog</li><li>Icarus Verilog</li><li>GTKWave</li><li>VS Code</li>
+            </ul>
+          </div>
+          <ul class="bullets">
+            <li>Implemented and simulated logic circuits: adders, multiplexers, encoders, latches, flip-flops, counters, shift registers.</li>
+            <li>Verified functional correctness with comprehensive testbenches and waveform analysis.</li>
+          </ul>
+          <a class="link" href="https://github.com/VishnuVardhan12345/Digital-Design-using-Verilog-HDL" target="_blank" rel="noopener">GitHub Repository →</a>
+        </article>
+
+        <article class="card project">
+          <div class="project-head">
+            <h3>Accident Detection Smart Helmet</h3>
+            <ul class="stack tags">
+              <li>ESP32</li><li>MPU6050</li><li>GPS (NEO-6M)</li><li>MAX30102</li><li>SW-420</li>
+            </ul>
+          </div>
+          <ul class="bullets">
+            <li>Designed a smart helmet for real-time accident detection using motion sensors and GPS tracking.</li>
+            <li>Integrated heart-rate sensing to monitor anomalies and issue alerts post-accident.</li>
+            <li>Detects impacts above 10g and shares live coordinates for emergency response.</li>
+          </ul>
+          <a class="link" href="https://github.com/VishnuVardhan12345/Accident-Detection-Smart-Helmet" target="_blank" rel="noopener">GitHub Repository →</a>
+        </article>
+
+        <article class="card project">
+          <div class="project-head">
+            <h3>GPS Tracking System</h3>
+            <ul class="stack tags">
+              <li>ESP32</li><li>GPS (NEO-6M)</li><li>Blynk</li>
+            </ul>
+          </div>
+          <ul class="bullets">
+            <li>Built a GPS tracker to provide real-time wireless location updates.</li>
+            <li>Integrated with Blynk IoT platform for remote monitoring and visualization.</li>
+          </ul>
+          <a class="link" href="https://github.com/VishnuVardhan12345/GPS-Tracker-using-ESP32-Neo-6M-module" target="_blank" rel="noopener">GitHub Repository →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership" class="section">
+    <div class="container grid two">
+      <div>
+        <h2>Leadership & Extracurricular</h2>
+        <div class="card">
+          <h3>IEEE Student Branch Chapter, IIITDM Kancheepuram</h3>
+          <p><em>January 2025 – Present</em> • Student Member and Volunteer; Secretary (April 2025 – Present)</p>
+          <ul class="bullets">
+            <li>Organized events connecting students with industry professionals; enhanced industry-academia collaboration.</li>
+            <li>Led skill development initiatives: workshops, seminars, mentorship programs.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Optica Student Chapter, IIITDM Kancheepuram</h3>
+          <p><em>January 2025 – Present</em> • Technical Team</p>
+          <ul class="bullets">
+            <li>Supported hands-on optics workshops and events.</li>
+            <li>Conducted STEM and optics outreach in government schools via interactive demos.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>IEEE WAMS 2025 Volunteer</h3>
+          <p><em>June 5–8, 2025</em> • Event Management and Design</p>
+          <ul class="bullets">
+            <li>Assisted in session management and inauguration planning.</li>
+            <li>Led design of event hoardings, posters, ID cards, and T-shirts.</li>
+            <li>Coordinated logistics for smooth event execution.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2>Experience</h2>
+        <div class="card">
+          <h3>Hands-on: Microprocessors and Microcontrollers</h3>
+          <ul class="tags">
+            <li>ESP32</li><li>Arduino</li><li>8086</li>
+          </ul>
+          <p>Practical embedded systems experience across prototyping and real-time applications.</p>
+        </div>
+        <div class="card">
+          <h3>Sports</h3>
+          <p>Passionate about swimming; regularly practice to improve technique and endurance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards" class="section">
+    <div class="container">
+      <h2>Awards & Achievements</h2>
+      <ul class="bullets">
+        <li>Best Student Award in school (2020–2021).</li>
+        <li>Selected for Reasoning, Mathematics and Physics Olympiad (Class 7–9).</li>
+        <li>Qualified for NTSE, INTSO and KAT Olympiads.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-cards">
+        <a class="card link-card" href="mailto:ec23b1123@iiitdm.ac.in">Email → ec23b1123@iiitdm.ac.in</a>
+        <a class="card link-card" href="tel:+919493942287">Phone → +91 9493942287</a>
+        <a class="card link-card" href="https://linkedin.com/in/vishnu-vardhan-kanikicharla-1bb017283" target="_blank" rel="noopener">LinkedIn Profile →</a>
+        <a class="card link-card" href="https://github.com/VishnuVardhan12345" target="_blank" rel="noopener">GitHub Profile →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Kanikicharla Vishnu Vardhan</p>
+    </div>
+  </footer>
+
+  <script>
+// Mobile nav toggle
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.site-nav');
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+
+// Smooth active link on scroll
+const links = Array.from(document.querySelectorAll('.site-nav a'));
+const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const activate = (id) => {
+  links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+};
+const onScroll = () => {
+  let current = sections[0]?.id || 'home';
+  for (const section of sections) {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= 120) current = section.id;
+  }
+  activate(current);
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Footer year
+const y = document.getElementById('year');
+if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
