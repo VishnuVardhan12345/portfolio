@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificates | Kanikicharla Vishnu Vardhan</title>
+  <meta name="description" content="Certificates, trainings, and achievements of Kanikicharla Vishnu Vardhan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+ :root {
+  --bg: #fff6ef;
+  --panel: #fffaf5;
+  --elev: #ffffff;
+  --text: #3a2b29;
+  --muted: #8f7f78;
+  --brand: #c06a24;
+  --brand-2: #e59a3c;
+  --accent: #f2c38c;
+  --border: #ead7c4;
+  --shadow: 0 12px 40px rgba(154, 99, 53, 0.14);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 600px at 0% 0%, #ffe6c8 0%, transparent 65%),
+    radial-gradient(900px 600px at 100% 20%, #ffd7b3 0%, transparent 60%),
+    var(--bg);
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+.container { width: min(1100px, 92%); margin: 0 auto; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(255, 246, 239, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(234,215,196,0.8); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: .22em;
+  font-size: 11px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 6px 14px;
+  border: 1px solid rgba(234,215,196,0.9);
+  background: rgba(255,250,245,0.9);
+}
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; }
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  display: block;
+  font-size: 13px;
+}
+.site-nav a:hover, .site-nav a.active {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(154, 99, 53, 0.16);
+}
+.nav-toggle { display: none; background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; }
+
+/* Hero */
+.hero {
+  padding: 96px 0 40px;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 40px 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  height: 260px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255,255,255,0.8), transparent 65%),
+    radial-gradient(circle at 80% 30%, rgba(255,232,205,0.9), transparent 70%);
+  filter: blur(1px);
+  opacity: 0.86;
+  z-index: -1;
+}
+.hero-inner { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 40px; align-items: center; }
+.hero h1 {
+  margin: 0 0 6px;
+  font-size: clamp(36px, 4vw, 46px);
+  font-family: "Playfair Display", "Times New Roman", serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.subtitle { color: var(--muted); margin: 6px 0 16px; font-size: 15px; max-width: 520px; }
+.hero-meta {
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.hero-meta strong { color: var(--text); }
+.links { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+.btn {
+  background: linear-gradient(120deg, #c06a24, #e59a3c);
+  color: #fffaf5;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 14px 40px rgba(154, 99, 53, 0.35);
+  font-size: 14px;
+  transition: transform 160ms ease-out, box-shadow 160ms ease-out, filter 160ms ease-out;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(234,215,196,0.9);
+  color: var(--text);
+  box-shadow: none;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+  box-shadow: 0 18px 46px rgba(154, 99, 53, 0.42);
+}
+.btn.ghost:hover {
+  background: rgba(255, 249, 242, 0.95);
+  box-shadow: 0 10px 30px rgba(154, 99, 53, 0.18);
+}
+
+/* Sections & cards */
+.section { padding: 64px 0; }
+.section h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.section > .container > p {
+  max-width: 720px;
+  color: var(--muted);
+}
+.grid.two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.card {
+  background: linear-gradient(180deg, var(--panel), var(--elev));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out, background 200ms ease-out;
+}
+.card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 22px 55px rgba(154, 99, 53, 0.32);
+  border-color: rgba(192,106,36,0.48);
+  background: linear-gradient(180deg, #fffdf9, var(--elev));
+}
+.bullets { margin: 0; padding-left: 18px; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 8px 0 0; list-style: none; }
+.tags li {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(234,215,196,0.9);
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.tags li::before {
+  content: "✦";
+  margin-right: 4px;
+  color: var(--brand);
+  font-size: 0.85em;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  background: rgba(255,249,242,0.9);
+  border: 1px solid rgba(234,215,196,0.9);
+  color: var(--muted);
+}
+.badge span {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--brand-2);
+}
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.cert-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.cert-title-row h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.cert-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); padding: 24px 0 32px; color: var(--muted); text-align: center; font-size: 13px; }
+
+section[id] { scroll-margin-top: 90px; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.985);
+  filter: blur(6px);
+  transition:
+    opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 700ms ease-out;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+@media (max-width: 680px) {
+  .site-nav { display: none; position: absolute; top: 56px; right: 4%; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow); }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; }
+  .nav-toggle { display: inline-block; }
+}
+  </style>
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <header class="site-header reveal">
+    <div class="container header-inner">
+      <a href="index.html#home" class="brand">KVV</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="#certificates" class="active">Certificates</a></li>
+          <li><a href="#training">Training</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#school">School</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="certificates" class="hero reveal">
+      <div class="container hero-inner">
+        <div>
+          <h1>Certificates &amp; Achievements</h1>
+          <p class="subtitle">
+            A curated view of my technical trainings, conferences, and academic achievements in VLSI, embedded systems, and electronics.
+          </p>
+          <div class="hero-meta">
+            <span><strong>Name:</strong> Kanikicharla Vishnu Vardhan</span>
+            <span><strong>Program:</strong> B.Tech in Electronics and Communication Engineering, IIITDM Kancheepuram</span>
+            <span><strong>Graduation:</strong> 2027 (Expected)</span>
+          </div>
+          <div class="links">
+            <a class="btn" href="index.html#training">Back to Portfolio</a>
+            <a class="btn ghost" href="index.html#projects">View Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="training" class="section reveal">
+    <div class="container">
+      <h2>Technical Training</h2>
+      <p>Formal programs and winter schools focused on semiconductor technology, RISC‑V, Verilog, and VLSI system design.</p>
+      <div class="cert-grid">
+        <article class="card">
+          <div class="cert-title-row">
+            <h3>RISC‑V Processor – RV32I Base ISA</h3>
+            <span class="badge"><span></span> Course · Mar 2026</span>
+          </div>
+          <div class="cert-meta">
+            <span>Maven Silicon</span>
+            <span>Architecture &amp; ISA Design</span>
+          </div>
+          <ul class="bullets">
+            <li>Completed structured training on RISC‑V RV32I instruction set architecture and microarchitecture concepts.</li>
+            <li>Strengthened understanding of pipeline stages, control logic, and verification considerations.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="cert-title-row">
+            <h3>Verilog HDL – Hands On</h3>
+            <span class="badge"><span></span> Course · Jan 2026</span>
+          </div>
+          <div class="cert-meta">
+            <span>Maven Silicon</span>
+            <span>RTL Design &amp; Simulation</span>
+          </div>
+          <ul class="bullets">
+            <li>Practiced synthesizable Verilog for combinational and sequential logic blocks.</li>
+            <li>Focused on testbench creation, simulation strategy, and waveform‑based debugging.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="cert-title-row">
+            <h3>VLSI System on Chip Design – Overview</h3>
+            <span class="badge"><span></span> Course · Feb 2026</span>
+          </div>
+          <div class="cert-meta">
+            <span>Maven Silicon</span>
+            <span>VLSI Flow &amp; Methodology</span>
+          </div>
+          <ul class="bullets">
+            <li>Explored the end‑to‑end VLSI SoC design flow from RTL to GDSII.</li>
+            <li>Understood trade‑offs in power, performance, and area (PPA) across the flow.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="cert-title-row">
+            <h3>CeNSE Winter School on Semiconductor Technology</h3>
+            <span class="badge"><span></span> Winter School · Dec 2025</span>
+          </div>
+          <div class="cert-meta">
+            <span>IISc Bengaluru</span>
+            <span>Certificate of Distinction (Score &gt; 75%)</span>
+          </div>
+          <ul class="bullets">
+            <li>Attended intensive lectures and labs on semiconductor devices and fabrication.</li>
+            <li>Earned distinction based on performance in course evaluations.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards" class="section reveal">
+    <div class="container">
+      <h2>Awards</h2>
+      <p>Recognition received for academic performance, design projects, and competition outcomes.</p>
+      <div class="cert-grid">
+        <article class="card">
+          <div class="cert-title-row">
+            <h3>IEEE CASS Phase‑1 – CPR Guidance System</h3>
+            <span class="badge"><span></span> 2nd Prize</span>
+          </div>
+          <div class="cert-meta">
+            <span>IEEE CASS</span>
+            <span>Cardio Guide – Embedded CPR Assistance Device</span>
+          </div>
+          <ul class="bullets">
+            <li>Awarded for the design of an embedded CPR guidance system combining sensor hardware and an Android app.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="cert-title-row">
+            <h3>Best Student Award</h3>
+            <span class="badge"><span></span> 2020–2021</span>
+          </div>
+          <div class="cert-meta">
+            <span>Sri Chaitanya School</span>
+          </div>
+          <ul class="bullets">
+            <li>Recognized for overall academic excellence and participation in school activities.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="cert-title-row">
+            <h3>CeNSE Winter School – Distinction</h3>
+            <span class="badge"><span></span> Academic Merit</span>
+          </div>
+          <div class="cert-meta">
+            <span>IISc Bengaluru</span>
+          </div>
+          <ul class="bullets">
+            <li>Certificate of Distinction for performance &gt; 75% in the semiconductor technology winter school.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="school" class="section reveal">
+    <div class="container">
+      <h2>School Olympiads &amp; Exams</h2>
+      <p>Early achievements in national‑level examinations and subject‑based olympiads.</p>
+      <div class="grid two">
+        <article class="card">
+          <h3>Olympiads &amp; Talent Exams</h3>
+          <ul class="bullets">
+            <li>Selected for Reasoning, Mathematics, and Physics olympiads (Class 7–9).</li>
+            <li>Qualified for NTSE, INTSO, and KAT olympiads.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Academic Highlights</h3>
+          <ul class="bullets">
+            <li>Maintained strong academic record through school and junior college.</li>
+            <li>Built a consistent foundation leading into electronics and communication engineering.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Kanikicharla Vishnu Vardhan • Certificates</p>
+    </div>
+  </footer>
+
+  <script>
+// Mobile nav toggle
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.site-nav');
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+
+// Smooth active link on scroll (only in-page anchors)
+const links = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
+const sections = links
+  .map(a => {
+    const target = a.getAttribute('href');
+    try {
+      return document.querySelector(target);
+    } catch {
+      return null;
+    }
+  })
+  .filter(Boolean);
+
+const activate = (id) => {
+  links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+};
+const onScroll = () => {
+  let current = sections[0]?.id || 'certificates';
+  for (const section of sections) {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= 120) current = section.id;
+  }
+  activate(current);
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Footer year
+const y = document.getElementById('year');
+if (y) y.textContent = new Date().getFullYear();
+
+// Scroll reveal animations
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && revealEls.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealEls.forEach(el => observer.observe(el));
+} else {
+  // Fallback: show all immediately
+  revealEls.forEach(el => el.classList.add('in-view'));
+}
+  </script>
+</body>
+</html>
+
